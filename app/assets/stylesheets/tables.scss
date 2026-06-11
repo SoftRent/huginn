@@ -1,0 +1,55 @@
+// Sortable table headers
+
+.table th a.selected {
+  position: relative;
+  text-decoration: underline;
+
+  &.asc:after, &.desc:after {
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: -1em;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+  }
+
+  &.asc:after {
+    content: "\f0de";  // fa-sort-up (was fa-sort-asc)
+  }
+
+  &.desc:after {
+    content: "\f0dd";  // fa-sort-down (was fa-sort-desc)
+  }
+}
+
+.table-striped > tbody > tr.hl {
+  &:nth-child(odd) {
+    > td, > th {
+      background-color: #ffeecc;
+    }
+  }
+
+  &:nth-child(even) {
+    > td, > th {
+      background-color: #f9e8c6;
+    }
+  }
+}
+
+table.events {
+  .payload {
+    color: #999;
+    font-size: 12px;
+    //text-align: center;
+    font-family: monospace;
+  }
+}
+
+.table.table-row-middle > tbody > tr {
+  > td,
+  > th {
+    vertical-align: middle;
+  }
+}
